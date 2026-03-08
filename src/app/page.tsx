@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 
 interface Query {
   id: number;
@@ -10,7 +11,7 @@ interface Query {
   status: "Open" | "Closed";
 }
 
-export default function Home() {
+function HomeContent() {
   const [queries, setQueries] = useState<Query[]>([]);
   const [queryText, setQueryText] = useState("");
   const [searchText, setSearchText] = useState("");
@@ -65,11 +66,14 @@ export default function Home() {
           {/* Category Title */}
           <div className="flex items-center justify-center gap-3 mt-4">
             <h2 className="text-xl font-bold text-brown-dark">Manufacture of metal products</h2>
-            <div className="w-11 h-11 bg-beige rounded-lg flex items-center justify-center flex-shrink-0">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <rect x="4" y="8" width="16" height="12" rx="1.5" stroke="#5a3e28" strokeWidth="1.8" fill="none"/>
-                <path d="M8 8V6a4 4 0 0 1 8 0v2" stroke="#5a3e28" strokeWidth="1.8" fill="none"/>
-                <path d="M10 13h4v3h-4z" fill="#5a3e28"/>
+            <div className="w-[56px] h-[56px] bg-[#ece5cc] rounded-2xl shadow-[0_2px_6px_rgba(0,0,0,0.08)] flex items-center justify-center flex-shrink-0">
+              <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
+                {/* T-shirt body + sleeves */}
+                <path d="M10 5L4 10V18H10V36H30V18H36V10L30 5H25C25 7.8 22.76 10 20 10C17.24 10 15 7.8 15 5H10Z" fill="#a07850"/>
+                {/* Collar stripe */}
+                <rect x="11.5" y="10.5" width="17" height="3" rx="0.5" fill="#e8dfc0"/>
+                {/* Pocket */}
+                <rect x="13" y="19" width="14" height="10" rx="1" stroke="#8a6840" strokeWidth="1.5" fill="none"/>
               </svg>
             </div>
           </div>
@@ -199,3 +203,6 @@ export default function Home() {
     </div>
   );
 }
+
+const Home = dynamic(() => Promise.resolve(HomeContent), { ssr: false });
+export default Home;
