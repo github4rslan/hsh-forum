@@ -15,6 +15,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Hsh Forum - Manufacture of Metal Products",
   description: "Forum for metal products manufacturing queries",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({

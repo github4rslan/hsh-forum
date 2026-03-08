@@ -52,15 +52,15 @@ function HomeContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFCDA]">
-      <div className="relative w-[430px] mx-auto h-[1144px] pb-12 bg-[#FFFCDA]">
+    <div className="min-h-screen bg-white flex justify-center">
+      <div className="relative w-full max-w-[430px] min-h-screen pb-12 bg-[#FFFCDA] sm:shadow-xl sm:my-0">
         {/* Header */}
         <header className="pt-6 px-4">
-          <h1 className="text-[36px] font-bold text-brown-light leading-[28.8px] tracking-[0%]">
+          <h1 className="text-[36px] font-bold text-[#A18152] leading-[28.8px] tracking-[0%]" style={{ fontFamily: "'Poppins', sans-serif" }}>
             Hsh
           </h1>
-          <p className="text-center mt-2">
-            <a href="#" className="text-[#241332] text-[9px] font-medium leading-[100%]">
+          <p className="mt-2 pl-[32%]">
+            <a href="#" className="text-[#241332] text-[9px] font-medium leading-[14px]" style={{ fontFamily: "'Poppins', sans-serif" }}>
               Who are we?
             </a>
           </p>
@@ -68,14 +68,14 @@ function HomeContent() {
 
         {/* Category Title */}
         <div className="px-4 mt-1">
-          <div className="flex items-center gap-3">
-            <h2 className="text-[18px] font-bold text-[#241332] leading-[23px] flex-1 font-[var(--font-geist)]">
+          <div className="flex items-center -gap-2">
+            <h2 className="text-[16px] sm:text-[18px] font-bold text-[#241332] leading-[23px] flex-1 whitespace-nowrap font-[var(--font-geist)]">
               Manufacture of metal products
             </h2>
-            <div className="flex items-center justify-center flex-shrink-0">
+            <div className="flex items-center justify-center flex-shrink-0 -ml-5">
               <svg
-                width="46.5"
-                height="46.5"
+                width="65"
+                height="65"
                 viewBox="0 0 77 77"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -163,10 +163,10 @@ function HomeContent() {
               </svg>
             </div>
           </div>
-          <p className="text-center mt-1">
+          <p className="-mt-7 pl-[55%]">
             <a
               href="#"
-              className="text-[#241332] text-[9px] font-medium underline leading-[100%] font-[var(--font-geist)]"
+              className="text-[#241332] text-[9px] font-medium underline leading-[12px] font-[var(--font-geist)]"
             >
               Got related skill?
             </a>
@@ -195,7 +195,12 @@ function HomeContent() {
             <button
               onClick={handlePost}
               disabled={posting || !queryText.trim()}
-              className="relative w-[115px] h-[31px] rounded-[20px] bg-transparent text-[#A18152] font-medium text-[16px] leading-[14px] hover:bg-beige/30 transition-colors disabled:opacity-50 cursor-pointer before:absolute before:inset-0 before:rounded-[20px] before:p-[2px] before:bg-gradient-to-br before:from-[#FFFCDA] before:to-[#F5EFC6] before:-z-10 before:content-[''] after:absolute after:inset-[2px] after:rounded-[18px] after:bg-cream-light after:-z-[5] after:content-['']"
+              style={{
+                background: "linear-gradient(96.63deg, #F4F1CB 21.38%, #FFFCDA 98.76%)",
+                boxShadow: "-5px -5px 10px rgba(255, 253, 245, 0.5), 5px 5px 10px rgba(218, 205, 144, 0.75)",
+                borderRadius: "20px",
+              }}
+              className="w-[115px] h-[31px] flex items-center justify-center text-[#A18152] font-medium text-[16px] leading-[14px] hover:opacity-90 transition-opacity disabled:opacity-50 cursor-pointer"
             >
               {posting ? "Posting..." : "Post query"}
             </button>
@@ -204,7 +209,7 @@ function HomeContent() {
 
         {/* Search Section */}
         <div className="mt-12 px-5">
-          <h3 className="text-center text-[#241332] font-medium text-[20px] leading-[100%]">
+          <h3 className="text-center text-[#241332] font-medium text-[18px] sm:text-[20px] leading-[100%]">
             …Or search the category&apos;s answers!
           </h3>
           <div className="mt-4 flex items-center gap-2">
@@ -244,57 +249,69 @@ function HomeContent() {
             <div
               key={query.id}
               style={{
-                background: "#fffbe3",
-                border: "1px solid rgba(237, 226, 176, 0.9)",
+                background: "linear-gradient(317.53deg, #FFFCDA 28.61%, #F4F1CB 82.19%)",
+                boxShadow: "7px 7px 12px rgba(218, 205, 144, 0.57), -8px -7px 8px rgba(255, 253, 245, 0.57)",
+                borderRadius: "8px",
               }}
-              className="rounded-xl px-4 py-3 shadow-[0_2px_6px_rgba(0,0,0,0.08)]"
+              className="px-4 py-3"
             >
-              <p className="text-[#4c5264] text-[11px] leading-[14px]">{query.text}</p>
-              <div className="flex items-center gap-[8px] mt-3 text-[#0b0b0b] flex-wrap">
-                {/* Views */}
-                <span className="flex items-center gap-[4px] text-[11px]">
-                  <svg className="w-4 h-[9.25px]" viewBox="0 0 24 14" fill="none">
-                    <path d="M1 7s4-6 11-6 11 6 11 6-4 6-11 6S1 7 1 7z" stroke="#020202" strokeWidth="1.5" fill="none"/>
-                    <circle cx="12" cy="7" r="3" stroke="#020202" strokeWidth="1.5" fill="none"/>
-                  </svg>
-                  {query.views} views
-                </span>
-                {/* Replies */}
-                <span className="flex items-center gap-[4px] text-[11px]">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#020202" strokeWidth="1.5" fill="none"/>
-                    <circle cx="9" cy="7" r="4" stroke="#020202" strokeWidth="1.5" fill="none"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#020202" strokeWidth="1.5" fill="none"/>
-                  </svg>
-                  Replies
-                </span>
-                {/* Date */}
-                <span className="flex items-center gap-[4px] text-[11px]">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="#020202" strokeWidth="1.5" fill="none"/>
-                    <path d="M16 2v4M8 2v4M3 10h18" stroke="#020202" strokeWidth="1.5"/>
-                  </svg>
-                  {query.date}
-                </span>
-                {/* Status */}
-                <span className="flex items-center gap-[4px] text-[11px]">
+              <p className="text-[#4C5264] text-[12px] font-normal leading-[16px]">{query.text}</p>
+              <div className="flex items-center flex-wrap mt-3 gap-y-2">
+                {/* Left metadata group */}
+                <div className="flex items-center gap-[8px] sm:gap-[16px]">
+                  {/* Views */}
+                  <span className="flex items-center gap-[4px] text-[11px] sm:text-[12px] text-[#0B0B0B]">
+                    <svg className="w-4 h-[9.25px]" viewBox="0 0 24 14" fill="none">
+                      <path d="M1 7s4-6 11-6 11 6 11 6-4 6-11 6S1 7 1 7z" stroke="#020202" strokeWidth="1.5" fill="none"/>
+                      <circle cx="12" cy="7" r="3" stroke="#020202" strokeWidth="1.5" fill="none"/>
+                    </svg>
+                    {query.views} views
+                  </span>
+                  {/* Replies */}
+                  <span className="flex items-center gap-[4px] text-[11px] sm:text-[12px] text-[#0B0B0B]">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#000000" strokeWidth="1.5" fill="none"/>
+                      <circle cx="9" cy="7" r="4" stroke="#000000" strokeWidth="1.5" fill="none"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#000000" strokeWidth="1.5" fill="none"/>
+                    </svg>
+                    Replies
+                  </span>
+                  {/* Date */}
+                  <span className="flex items-center gap-[4px] text-[11px] sm:text-[12px] text-[#0B0B0B]">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                      <rect x="3" y="3.5" width="18" height="18.5" rx="4" stroke="#0B0B0B" strokeWidth="1.5" fill="none"/>
+                      <line x1="3" y1="9" x2="21" y2="9" stroke="#0B0B0B" strokeWidth="1.5"/>
+                      <line x1="8" y1="2" x2="8" y2="5" stroke="#0B0B0B" strokeWidth="1.5" strokeLinecap="round"/>
+                      <line x1="16" y1="2" x2="16" y2="5" stroke="#0B0B0B" strokeWidth="1.5" strokeLinecap="round"/>
+                      <circle cx="8" cy="14" r="1" fill="#0B0B0B"/>
+                      <circle cx="12" cy="14" r="1" fill="#0B0B0B"/>
+                      <circle cx="16" cy="14" r="1" fill="#0B0B0B"/>
+                    </svg>
+                    {query.date}
+                  </span>
+                </div>
+                {/* Status group */}
+                <div className="flex items-center gap-[4px] text-[11px] sm:text-[12px] text-[#0B0B0B] ml-[8px] sm:ml-[16px]">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
                     {query.status === "Open" ? (
                       <>
-                        <rect x="3" y="11" width="18" height="11" rx="2" stroke="#020202" strokeWidth="1.5" fill="none"/>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#020202" strokeWidth="1.5" fill="none"/>
+                        <rect x="4" y="11" width="16" height="11" rx="2" stroke="#22242F" strokeWidth="1.5" fill="none"/>
+                        <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="#22242F" strokeWidth="1.5" fill="none"/>
                       </>
                     ) : (
                       <>
-                        <rect x="3" y="11" width="18" height="11" rx="2" stroke="#020202" strokeWidth="1.5" fill="none"/>
-                        <path d="M7 11V7a5 5 0 0 1 5-5 5 5 0 0 1 5 5v4" stroke="#020202" strokeWidth="1.5" fill="none"/>
+                        <rect x="4" y="11" width="16" height="11" rx="2" stroke="#22242F" strokeWidth="1.5" fill="none"/>
+                        <path d="M8 11V7a4 4 0 0 1 4-4 4 4 0 0 1 4 4v4" stroke="#22242F" strokeWidth="1.5" fill="none"/>
                       </>
                     )}
                   </svg>
                   {query.status}
-                </span>
+                </div>
                 {/* ID */}
-                <span className="ml-auto text-[10px] font-semibold text-[#2ba05a]">
+                <span
+                  className="ml-auto text-[9px] font-normal"
+                  style={{ fontFamily: "'Arial Rounded MT Bold', Arial, sans-serif", color: "#2BA05A" }}
+                >
                   #{query.id}
                 </span>
               </div>
@@ -304,7 +321,14 @@ function HomeContent() {
 
         {/* Browse All */}
         <div className="flex justify-center mt-10 px-4 pb-10">
-          <button className="px-8 py-2.5 rounded-full border border-[#e6dbb2] bg-[#fffbe3] text-[#a18152] font-medium text-[12px] hover:bg-[#f6ebc4] transition-colors cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.12)]">
+          <button
+            style={{
+              background: "linear-gradient(96.63deg, #F4F1CB 21.38%, #FFFCDA 98.76%)",
+              boxShadow: "-5px -5px 10px rgba(255, 253, 245, 0.5), 5px 5px 10px rgba(218, 205, 144, 0.75)",
+              borderRadius: "20px",
+            }}
+            className="w-[264px] h-[31px] flex items-center justify-center text-[#A18152] font-medium text-[16px] leading-[14px] hover:opacity-90 transition-opacity cursor-pointer"
+          >
             Browse all categories
           </button>
         </div>
