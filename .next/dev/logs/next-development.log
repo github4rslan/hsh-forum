@@ -94,3 +94,37 @@ It can also happen if the client has a browser extension installed which messes 
 [00:05:05.349] Server  LOG     ✓ Compiled in 112ms
 [00:05:50.864] Server  WARN    ⚠ Cross origin request detected from 192.168.0.102 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:09:26.144] Server  LOG     ✓ Compiled in 122ms
+[00:10:32.512] Server  LOG     ✓ Compiled in 147ms
+[00:11:00.078] Server  LOG     ✓ Compiled in 93ms
+[00:11:28.484] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:55.456] Server  LOG     ✓ Compiled in 83ms
+[00:16:03.448] Server  LOG     ✓ Compiled in 218ms
+[00:16:11.754] Server  LOG     ✓ Compiled in 247ms
+[00:19:56.809] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:48.686] Server  LOG     ✓ Compiled in 949ms
+[00:22:34.859] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:34.902] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:52.184] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:24.535] Server  LOG     ✓ Compiled in 135ms
+[00:28:32.759] Server  LOG     ✓ Compiled in 111ms
+[00:29:43.387] Server  LOG     ✓ Compiled in 276ms
+[00:29:50.277] Server  LOG     ✓ Compiled in 245ms
+[00:30:52.233] Server  LOG     ✓ Compiled in 190ms
+[00:31:29.928] Server  LOG     ✓ Compiled in 87ms
+[00:32:27.029] Server  LOG     ✓ Compiled in 146ms
+[00:34:29.134] Server  LOG     ✓ Compiled in 257ms
+[00:41:59.199] Server  LOG     ✓ Compiled in 341ms
+[00:42:10.230] Server  LOG     ✓ Compiled in 10.6s
+[00:43:06.011] Server  LOG     ✓ Compiled in 294ms
+[00:43:07.012] Server  LOG     ✓ Compiled in 806ms
+[00:43:20.132] Server  LOG     ✓ Compiled in 462ms
+[00:43:20.527] Server  LOG     ✓ Compiled in 80ms
+[00:44:39.725] Server  LOG     ✓ Compiled in 162ms
+[00:46:46.657] Server  LOG     ✓ Compiled in 173ms
+[00:48:08.123] Server  LOG     ✓ Compiled in 170ms
+[00:50:32.914] Server  LOG     ✓ Compiled in 307ms
+[00:52:12.605] Server  LOG     ✓ Compiled in 332ms
+[00:52:20.394] Server  LOG     ✓ Compiled in 101ms
+[00:55:57.936] Server  LOG     ✓ Compiled in 453ms
+[00:56:50.188] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

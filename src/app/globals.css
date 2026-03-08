@@ -9,10 +9,10 @@
   --color-beige: #e8ddb5;
   --color-beige-light: #f0e8c8;
   --color-green-accent: #2e8b57;
-  --color-card-bg: #f0ecc8;
-  --color-card-border: #e0d8a0;
+  --color-card-bg: #FFFCDA;
+  --color-card-border: #d8d0a0;
 }
 
 body {
-  background-color: var(--color-cream);
+  background-color: white;
 }
