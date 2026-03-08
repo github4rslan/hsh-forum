@@ -128,3 +128,72 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 [00:52:20.394] Server  LOG     ✓ Compiled in 101ms
 [00:55:57.936] Server  LOG     ✓ Compiled in 453ms
 [00:56:50.188] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:06:54.900] Server  LOG     ✓ Compiled in 3.4s
+[01:06:56.705] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:06:58.929] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:07:01.098] Server  LOG     ✓ Compiled in 653ms
+[01:09:23.147] Server  LOG     ✓ Compiled in 320ms
+[01:13:02.879] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:15:20.733] Server  LOG     ✓ Compiled in 139ms
+[01:16:14.163] Server  LOG     ✓ Compiled in 1045ms
+[01:16:16.114] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:16:16.831] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         suppresshydrationwarning="true"
+-                         data-qb-installed="true"
+                        >
+                  ...
+
+[01:16:19.402] Server  LOG     ✓ Compiled in 1464ms
+[01:16:20.271] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:16:21.682] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:16:24.696] Server  LOG     ✓ Compiled in 260ms
+[01:16:26.380] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__1774cae7._.css
+[01:17:39.305] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:22:00.277] Server  LOG     ✓ Compiled in 162ms
+[01:29:47.814] Server  LOG     ✓ Compiled in 525ms
+[01:29:49.778] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__1774cae7._.css
+[01:31:47.614] Server  LOG     ✓ Compiled in 406ms
+[01:34:10.144] Server  LOG     ✓ Compiled in 357ms
+[01:36:44.617] Server  LOG     ✓ Compiled in 611ms
+[01:36:48.379] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__1774cae7._.css
+[01:38:44.598] Server  LOG     ✓ Compiled in 1024ms
+[01:38:46.378] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__1774cae7._.css
+[01:40:19.505] Server  LOG     ✓ Compiled in 556ms
+[01:40:21.468] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__1774cae7._.css
+[01:41:10.035] Server  LOG     ✓ Compiled in 109ms
+[01:49:54.395] Server  LOG     ✓ Compiled in 455ms
+[01:49:55.401] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__1774cae7._.css
+[01:54:17.499] Server  LOG     ✓ Compiled in 437ms
+[01:54:18.793] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__1774cae7._.css
+[01:56:43.170] Server  LOG     ✓ Compiled in 156ms
+[01:57:28.560] Server  LOG     ✓ Compiled in 574ms
+[02:02:25.265] Server  LOG     ✓ Compiled in 218ms
